@@ -1,0 +1,41 @@
+<div class="search-results" infinite-scroll [infiniteScrollDistance]="scrollDistance"
+  [infiniteScrollUpDistance]="scrollUpDistance" [infiniteScrollThrottle]="throttle" (scrolled)="onScrollDown()"
+  (scrolledUp)="onUp()">
+  <div *ngFor="let card of cards">
+    <div class="card">
+      <div class="card-header">
+        {{card.sellerName}}  has shared a listing!
+      </div>
+      <div class="card-body">
+       <a href="\item-desc" (click) = "onDesc(card._id)" ><img  [src]="card.image"  class="card-img-top" alt="..."></a>
+        <div class="card-detail">
+          <h5 class="card-title">{{card.name}}</h5>
+          <p class="card-text">{{card.price}} | {{card.size}} | Brand</p>
+        </div>
+      </div>
+      <div class="controls">
+        <div class="icon-container">
+          <div class="icons" *ngIf = '!(likes.includes(card._id))'>
+            <p>{{card.likes}}</p>
+            <a (click) = "rate(card._id)"><mat-icon class="icon">favorite_border</mat-icon></a>
+          </div>
+          <div class="icons" *ngIf = '(likes.includes(card._id))'>
+            <p>{{card.likes}}</p>
+            <a (click) = "unrate(card._id)"><mat-icon class="icon">favorite</mat-icon></a>
+          </div>
+          <div class="icons">
+            <p>{{card.shares}}</p>
+            <a (click) = "test(card._id)"><mat-icon class="icon">autorenew</mat-icon> </a>
+          </div>
+          <div class="icons">
+            <mat-icon class="icon">share</mat-icon>
+          </div>
+        </div>
+      
+        <div class="buy-btn-container">
+          <button class="btn btn-primary" (click)="onBuy(card._id)">buy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

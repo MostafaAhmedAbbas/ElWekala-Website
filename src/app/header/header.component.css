@@ -1,0 +1,49 @@
+a {
+  text-decoration: none;
+  color: #8b0e70;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+li{
+  margin-left: 30px;
+}
+li button{
+  font-family: "buka";
+  font-size: 22pt;
+  color: #8b0e70;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+
+.logoH{
+    display: block;
+    padding: 5px;
+    height: 100%;
+    width: auto;
+}
+.logoH img{
+  vertical-align: middle;
+  border-style: none;
+  height: auto;
+  width: 95%;
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+  height: 75px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.10);
+  padding: 0 2%;
+  z-index: 2;
+
+}
+.mat-icon {
+  height: 35px;
+  color: #8b0e70;
+  width: 35px;
+  font-size: 26pt;
+}
+

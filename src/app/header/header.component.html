@@ -1,0 +1,30 @@
+<mat-toolbar color="secondary">
+  <span class="logoH">
+    <img src='../../assets/imgs/logo.png' routerLink="/news" alt="image">
+  </span>
+  <span class="spacer"></span>
+  <ul>
+    <!-- <li *ngIf="userIsAuthenticated">
+      <a mat-button routerLink = "/create" routerLinkActive="mat-accent"> New Post</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink = "/login" routerLinkActive="mat-accent"> Login</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink = "/signup" routerLinkActive="mat-accent"> SIGNUP</a>
+    </li> -->
+    <li>
+      <mat-icon routerLink="/users" class="icon">contacts</mat-icon>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <mat-icon routerLink="/profile" class="icon">face</mat-icon>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <mat-icon routerLink="/checkout" class="icon">shopping_cart</mat-icon>
+    </li>
+
+    <li *ngIf="userIsAuthenticated">
+      <button mat-button (click)="onLogout()"> logout </button>
+    </li>
+  </ul>
+</mat-toolbar>

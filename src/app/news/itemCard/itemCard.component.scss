@@ -1,0 +1,69 @@
+.card{
+    width: 100%;
+    height: 550px;
+    border: 1px solid rgba(139, 14, 112, 0.25);
+    margin-top: 2%;
+
+}
+.card-header{
+    color: black;
+    background-color: white;
+    height: 10%;
+}
+.card-body{
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    height: 80%;
+    text-align: center;
+}
+.card-detail{
+    position: absolute;
+    bottom: 17%;
+    text-align: initial;
+}
+
+.icon{
+        color: #8b0e70;
+}
+.icons{
+    /* margin: 0; */
+    width: 5%;
+    display: inline-block;
+    padding: 1% 0;
+}
+.card-img-top {
+    height: 90%;
+    text-align: center;
+    margin: 1% 0;
+    width: auto;
+}
+.card-title{
+    margin: 1% 0;
+}
+.btn-primary{
+    color: #fff;
+    background-color: #8b0e70;
+    border-color: #8b0e70;
+}
+.icon-container{
+    text-align: center;
+    height: 100%;
+    
+}
+.buy-btn-container{
+    text-align: right;
+    margin: 1% 3%;
+    position: absolute;
+    right: 0;
+    top: 5%;
+
+}
+.controls{    
+    height: 13%;
+    border-top: 1px solid rgba(139, 14, 112, 0.25);
+    position: relative;
+}
+p{
+    margin:0;
+}

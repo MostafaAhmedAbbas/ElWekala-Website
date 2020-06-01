@@ -1,0 +1,61 @@
+<div class="wrap cf">
+	<h1 class="projTitle">Checkout</h1>
+	<div class="heading cf">
+	  <h1>My Cart</h1>
+	  <a  routerLink = "/news" class="continue">Continue Shopping</a>
+	</div>
+	<div class="cart">
+  <!--    <ul class="tableHead">
+		<li class="prodHeader">Product</li>
+		<li>Quantity</li>
+		<li>Total</li>
+		 <li>Remove</li>
+	  </ul>-->
+	  <ul class="cartWrap">
+
+		<div *ngFor='let buy of toBuy'>
+		<li class="items even">
+		 <div class="infoWrap"> 
+		  <div class="cartSection info">
+			   
+		  <img [src]="buy.image" alt="" class="itemImg" />
+			
+			<h3>{{buy.name}}</h3>
+		  
+		  
+  
+			
+		  </div>  
+	  
+		  
+		  <div class="prodTotal cartSection">
+			<p>{{buy.price}}</p>
+		  </div>
+	  
+			  <div class="cartSection removeWrap">
+			 <a  class="remove" (click)="onRemove(buy._id)">x</a>
+		  </div>
+		   </div>
+		</li>
+	</div>
+		
+		
+		<!--<li class="items even">Item 2</li>-->
+   
+	  </ul>
+	</div>
+	
+	<div class="promoCode"><label for="promo">Have A Promo Code?</label><input type="text" name="promo" placholder="Enter Code" />
+	<a href="#" class="btn"></a></div>
+	
+	<div class="subtotal cf">
+	  <ul>
+		<li class="totalRow"><span class="label">Subtotal</span><span class="value">${{totalPrice}}</span></li>
+		
+		<li class="totalRow"><span class="label">Fees</span><span class="value">{{fees}}</span></li>
+		
+		<li class="totalRow final"><span class="label">Total</span><span class="value">${{ourCut}}</span></li>
+		<a href="#" class="btn continue">Checkout</a>
+	  </ul>
+	</div>
+  </div>
